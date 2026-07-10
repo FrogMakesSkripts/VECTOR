@@ -1,1 +1,1 @@
-g++ -std=c++20 -static -static-libgcc -static-libstdc++ -DUNICODE -D_UNICODE -Irendering_engine/DX3D/include (Get-ChildItem -Recurse -Filter *.cpp).FullName -o VECTOR.exe
+g++ -std=c++20 -static -static-libgcc -static-libstdc++ -DUNICODE -D_UNICODE -Igraphics_engine/DX3D/include -Igraphics_engine/DX3D/source (Get-ChildItem -Recurse -Filter *.cpp).FullName -o VECTOR.exe -ld3d11 -ldxgi -ldxguid -ld3dcompiler

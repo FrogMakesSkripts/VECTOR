@@ -4,8 +4,8 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/rendering_engine/DX3D/include/**",
-                "${workspaceFolder}/rendering_engine/DX3D/source/**"
+                "${workspaceFolder}/graphics_engine/DX3D/include/**",
+                "${workspaceFolder}/graphics_engine/DX3D/source/**"
             ],
             "defines": [
                 "_DEBUG",

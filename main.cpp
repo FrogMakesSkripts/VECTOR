@@ -2,8 +2,8 @@
 
 int main () {
     try {
-        dx3d::engine window{};
-        window.run();
+        dx3d::engine dx3dEngine{};
+        dx3dEngine.run();
     }
     catch(const std::runtime_error&) {
         return EXIT_FAILURE;

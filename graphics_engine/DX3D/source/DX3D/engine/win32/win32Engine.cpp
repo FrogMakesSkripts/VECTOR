@@ -1,4 +1,4 @@
-#include <DX3D/engine/engine.h>
+#include <DX3D/engine/dx3dEngine.h>
 #include <Windows.h>
 
 void dx3d::engine::run()

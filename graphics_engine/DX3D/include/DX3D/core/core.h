@@ -7,4 +7,7 @@ namespace dx3d
     class base;
     class window;
     class engine;
+
+    class graphicsEngine;
+    class renderSystem;
 }

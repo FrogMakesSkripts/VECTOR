@@ -10,4 +10,6 @@ namespace dx3d
 
     class graphicsEngine;
     class renderSystem;
+
+    class logger;
 }

@@ -7,7 +7,7 @@ namespace dx3d
     class graphicsEngine final : base
     {
     public:
-        graphicsEngine();
+        explicit graphicsEngine(const graphicsEngineDescriptor& descriptor);
         virtual ~graphicsEngine() override;
     private:
         std::unique_ptr<renderSystem> m_renderSystem{};

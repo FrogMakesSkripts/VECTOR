@@ -7,7 +7,7 @@ namespace dx3d
     class engine : public base
     {
     public:
-        engine();
+        explicit engine(const dx3dEngineDescriptor& descriptor);
         virtual ~engine() override;
 
         virtual void run() final;

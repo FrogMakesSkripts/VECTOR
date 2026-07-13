@@ -1,5 +1,5 @@
 #pragma once
-#include <DX3D/core/core.h>
+#include <DX3D/core/common.h>
 #include <DX3D/core/base.h>
 #include <d3d11.h>
 #include <wrl.h>
@@ -9,7 +9,7 @@ namespace dx3d
     class renderSystem final : public base
     {
     public:
-        renderSystem();
+        explicit renderSystem(const renderSystemDescriptor& descriptor);
         virtual ~renderSystem() override;
     private:
         Microsoft::WRL::ComPtr<ID3D11Device> m_d3dDevice{};

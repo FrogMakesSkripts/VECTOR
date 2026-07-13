@@ -2,7 +2,7 @@
 
 int main () {
     try {
-        dx3d::engine dx3dEngine{};
+        dx3d::engine dx3dEngine({dx3d::logger::logLevel::Error});
         dx3dEngine.run();
     }
     catch(const std::runtime_error&) {

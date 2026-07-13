@@ -9,10 +9,10 @@ dx3d::engine::engine(const dx3dEngineDescriptor& descriptor) :
     m_graphicsEngine = std::make_unique<graphicsEngine>(graphicsEngineDescriptor{m_logger});
     m_display = std::make_unique<window>(windowDescriptor{m_logger});
 
-    m_loggerPtr -> log(logger::logLevel::Info, "Engine initialized.");
+    DX3DLogInfo("Engine initialized.");
 }
 
 dx3d::engine::~engine()
 {
-    m_loggerPtr -> log(logger::logLevel::Info, "Engine deallocation started...");
+    DX3DLogInfo("Engine deallocation started...");
 }

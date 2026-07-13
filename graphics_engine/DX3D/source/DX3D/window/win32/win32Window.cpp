@@ -16,7 +16,7 @@ static LRESULT CALLBACK WindowProcedure(HWND hwnd, UINT msg, WPARAM wparam, LPAR
     return 0;
 }
 
-dx3d::window::window(const windowDescriptor& descriptor) : base(descriptor.base)
+dx3d::window::window(const windowDescriptor& descriptor) : base(descriptor.base), m_size(descriptor.size)
 {
     auto registerWindowClassFunction = []() {
                 WNDCLASSEX window{};
@@ -30,10 +30,10 @@ dx3d::window::window(const windowDescriptor& descriptor) : base(descriptor.base)
 
     if (!windowClassId) { DX3DLogErrorAndThrow("RegisterClassEx failed."); }
     
-    RECT rectangle{0, 0, 1920, 1080};
+    RECT rectangle{0, 0, m_size.width, m_size.height};
     AdjustWindowRect(&rectangle, WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU, false);
 
-    m_handle = CreateWindowEx(NULL, MAKEINTATOM(windowClassId), L"V.E.C.T.O.R AI World Simulation",
+    m_handle = CreateWindowEx(0, MAKEINTATOM(windowClassId), L"V.E.C.T.O.R AI World Simulation",
         WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU, CW_USEDEFAULT, CW_USEDEFAULT,
         rectangle.right - rectangle.left, rectangle.bottom - rectangle.top,
         NULL, NULL, NULL, NULL

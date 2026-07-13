@@ -10,7 +10,8 @@ namespace dx3d
         explicit window(const windowDescriptor& descriptor);
         virtual ~window() override;
 
-    private:
+    protected:
         void* m_handle{};
+        rect m_size{};
     };
 }
